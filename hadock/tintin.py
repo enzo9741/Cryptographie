@@ -76,7 +76,7 @@ def decode(string):
 		return
 	else: 
 		#Parcours des octect de 90 a 150
-		for i in range(90, 150):
+		for i in range(255):
 			value = ''
 			#Parcours de chaque caractere a déchiffrer
 			for caractere in string_decode:
@@ -90,15 +90,16 @@ def decode(string):
 				score = score_english(value)
 
 				#Filtre affin de vérifier le score du mot
-				if score > 70:
+				if score > 50:
 					#Affichage de la valeur trouvé
-					print(f"{value} | {score_english(value)} | {test} | {i}")
+					#print(f"{value} | {score_english(value)} | {test} | {i}")
 
 					#Envoie du code trouvé
 					send(value.encode())
-
-					#Affichage du flag reçu
-					print(receive())
+					result = receive()
+					if b"guardia" in result:
+						#Affichage du flag reçu
+						print(result)
 
 
 if __name__ == '__main__':
