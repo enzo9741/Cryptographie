@@ -117,7 +117,4 @@ if __name__ == '__main__':
 	
 	# Todo: décodez le flag !
 	decode(hex_chall.decode())
-
-	# Envoi du code
-	send('Moule à Gauffffrre !'.encode())
-	print(receive())
+	print("Si le flag ne s'affiche pas relancer le script jusqu'a se que le flag soit afficher")

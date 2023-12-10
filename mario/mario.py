@@ -1,4 +1,4 @@
-#!/home/enzo/Bachelor/crypto/bin python3
+#!/usr/bin/env python3
 #coding: utf-8
 
 # On sait que le texte est en base 64 car :
